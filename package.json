@@ -1,0 +1,23 @@
+{
+  "name": "lineup_remote",
+  "version": "1.0.0",
+  "description": "LineUp.js remote data provider test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sgratzl/lineup_remote.git"
+  },
+  "author": "Samuel Gratzl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sgratzl/lineup_remote/issues"
+  },
+  "homepage": "https://github.com/sgratzl/lineup_remote#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "sqlite3": "^3.1.2"
+  }
+}
