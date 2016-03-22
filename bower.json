@@ -2,6 +2,7 @@
   "name": "lineup_remote",
   "version": "1.0.0",
   "dependencies": {
-    "lineupjs": "Caleydo/lineup.js"
+    "lineupjs": "Caleydo/lineup.js",
+    "bootstrap": "~3.3.6"
   }
 }
