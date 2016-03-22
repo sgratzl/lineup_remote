@@ -34,7 +34,19 @@
      * @param desc
      */
     sort: function(desc) {
-      return Promise.resolve(d3.range(100));
+      var args = {
+        _asc: desc.asc
+      }
+      if (Array.isArray(desc.id)) {
+        //combined score id : weight
+        desc.id.forEach(function(col) {
+          args[col.id] = col.weight;
+        });
+      } else {
+        //simple
+        args._column = desc.id;
+      }
+      return $.getJSON('./sort', args);
     },
     /**
      * returns a slice of the data array identified by a list of indices
@@ -50,7 +62,9 @@
      * @param column
      */
     mappingSample: function(column) {
-      return Promise.resolve([]);
+      return $.getJSON('./sample', {
+        length: 100
+      });
     },
     /**
      * return the matching indices matching the given arguments
@@ -58,7 +72,10 @@
      * @param column
      */
     search: function(search, column) {
-      return Promise.resolve([]);
+      return $.getJSON('./search', {
+        query: search,
+        column: column
+      });
     }
   }
 
